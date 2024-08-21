@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="jumbotron">
+    <h1 class="display-4">AUTOMATIC GRADER FOR MULTIPLE CHOICE EXAMS</h1>
+    <form method="POST" action="{{ url_for('dev_df') }}"> 
+        <div class="form-group">
+            <label for="numQuestions">Number of questions:</label>
+            <input type="number" class="form-control" id="numQuestions" name="numQuestions">
+        </div>
+        <div class="form-group">
+            <label for="numOptions">Number of options:</label>
+            <input type="number" class="form-control" id="numOptions" name="numOptions">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    {% if df_html %}
+    <div>
+        <h2>Generated Dataframe:</h2>
+        {{ df_html | safe }}
+
+
+    </div>
+
+    <h2>Formulario Dinámico de Preguntas</h2>
+    <form method="POST" action="{{ url_for('submit_answers') }}">
+        
+        <input type="hidden" name="num_q" value="{{ num_q }}">
+
+
+        {% for i in range(num_q) %}
+        <div class="form-group">
+            <label for="{{ i }}">Question {{ i+1 }}</label>
+
+            <select class="form-control" id="{{ i }}" name="{{ i }}">
+
+                {% for option in options %}
+                <option value="{{ option }}">{{ option }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        {% endfor %}
+        <button type="submit" class="btn btn-primary">Submit Answers</button>
+        
+    </form>
+
+
+    <button type="submit" class="btn btn-primary">Download csv</button>
+    <a href="{{ url_for('prediction') }}" class="btn btn-primary ">Make predictions</a>
+    {% endif %}
+</div>
+{% endblock %}
+

@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+{% block content %}
+<div class="jumbotron">
+    <form method="POST" action="{{ url_for('take') }}">
+        {% if df_html %}
+            <div>
+                <h2>Generated Dataframe:</h2>
+                {{ df_html | safe }}
+            </div>
+            <a href="{{ url_for('download_csv') }}" class="btn btn-primary">Download CSV</a>
+        {% endif %}
+    </form>
+</div>
+{% endblock %}
