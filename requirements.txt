@@ -1,0 +1,9 @@
+# python=3.10.14
+tensorflow==2.10.1
+opencv-python==4.10.0.84
+numpy==1.26.4
+pandas==2.2.1
+imutils==0.5.4
+matplotlib==3.8.0
+flask==3.0.3
+scikit-learn
