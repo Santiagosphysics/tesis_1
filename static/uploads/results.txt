@@ -1,0 +1,188 @@
+Image: ./static/uploads\extracted\images_test\img_001.png
+Answer: BDCABDC
+Grade: 14
+
+Image: ./static/uploads\extracted\images_test\img_002.png
+Answer: ABCDEEB
+Grade: 28
+
+Image: ./static/uploads\extracted\images_test\img_003.png
+Answer: ADEBEEB
+Grade: 14
+
+Image: ./static/uploads\extracted\images_test\img_004.png
+Answer: DBABABA
+Grade: 57
+
+Image: ./static/uploads\extracted\images_test\img_005.png
+Answer: ACBD5BC
+Grade: 14
+
+Image: ./static/uploads\extracted\images_test\img_006.png
+Answer: EABCDEA
+Grade: 14
+
+Image: ./static/uploads\extracted\images_test\img_007.png
+Answer: BBDCBDB
+Grade: 14
+
+Image: ./static/uploads\extracted\images_test\img_008.png
+Answer: ACBACDA
+Grade: 42
+
+Image: ./static/uploads\extracted\images_test\img_009.png
+Answer: BCDABCA
+Grade: 28
+
+Image: ./static/uploads\extracted\images_test\img_010.png
+Answer: ABCDBDD
+Grade: 28
+
+Image: ./static/uploads\extracted\images_test\img_011.png
+Answer: ADBCADE
+Grade: 28
+
+Image: ./static/uploads\extracted\images_test\img_012.png
+Answer: ABCABCA
+Grade: 57
+
+Image: ./static/uploads\extracted\images_test\img_013.png
+Answer: BAABADD
+Grade: 28
+
+Image: ./static/uploads\extracted\images_test\img_014.png
+Answer: AAAAA5S7
+Grade: 57
+
+Image: ./static/uploads\extracted\images_test\img_015.png
+Answer: EABCDEA7
+Grade: 14
+
+Image: ./static/uploads\extracted\images_test\img_016.png
+Answer: ADDBBAC
+Grade: 28
+
+Image: ./static/uploads\extracted\images_test\img_017.png
+Answer: ABCDEAC
+Grade: 42
+
+Image: ./static/uploads\extracted\images_test\img_018.png
+Answer: ADCDEBA
+Grade: 28
+
+Image: ./static/uploads\extracted\images_test\img_019.png
+Answer: ABABCDA
+Grade: 57
+
+Image: ./static/uploads\extracted\images_test\img_020.png
+Answer: ABDCABD
+Grade: 42
+
+Image: ./static/uploads\extracted\images_test\img_021.png
+Answer: ABABABA
+Grade: 71
+
+Image: ./static/uploads\extracted\images_test\img_022.png
+Answer: CDCJCDC
+Grade: 0
+
+Image: ./static/uploads\extracted\images_test\img_023.png
+Answer: ABBACAB
+Grade: 57
+
+Image: ./static/uploads\extracted\images_test\img_024.png
+Answer: ABCDDAD
+Grade: 42
+
+Image: ./static/uploads\extracted\images_test\img_025.png
+Answer: DBBDBAC
+Grade: 28
+
+Image: ./static/uploads\extracted\images_test\img_026.png
+Answer: ABCDBDD
+Grade: 28
+
+Image: ./static/uploads\extracted\images_test\img_027.png
+Answer: DBCDEAD
+Grade: 28
+
+Image: ./static/uploads\extracted\images_test\img_028.png
+Answer: CCCCCCC
+Grade: 0
+
+Image: ./static/uploads\extracted\images_test\img_029.png
+Answer: ABCABDA
+Grade: 57
+
+Image: ./static/uploads\extracted\images_test\img_030.png
+Answer: BDBBBDAA
+Grade: 14
+
+Image: ./static/uploads\extracted\images_test\img_031.png
+Answer: EDABCDE
+Grade: 14
+
+Image: ./static/uploads\extracted\images_test\img_032.png
+Answer: ACDEBAC
+Grade: 28
+
+Image: ./static/uploads\extracted\images_test\img_033.png
+Answer: ACDBBDC
+Grade: 14
+
+Image: ./static/uploads\extracted\images_test\img_034.png
+Answer: ADCDBAE
+Grade: 28
+
+Image: ./static/uploads\extracted\images_test\img_035.png
+Answer: BBBBBBB
+Grade: 14
+
+Image: ./static/uploads\extracted\images_test\img_036.png
+Answer: ABCDEAD
+Grade: 42
+
+Image: ./static/uploads\extracted\images_test\img_037.png
+Answer: AEBCDAB
+Grade: 28
+
+Image: ./static/uploads\extracted\images_test\img_038.png
+Answer: CDDBBAD
+Grade: 14
+
+Image: ./static/uploads\extracted\images_test\img_039.png
+Answer: ADDBADD
+Grade: 28
+
+Image: ./static/uploads\extracted\images_test\img_040.png
+Answer: EABCDEA
+Grade: 14
+
+Image: ./static/uploads\extracted\images_test\img_041.png
+Answer: EEEEEEE
+Grade: 0
+
+Image: ./static/uploads\extracted\images_test\img_042.png
+Answer: ABCDDEA
+Grade: 42
+
+Image: ./static/uploads\extracted\images_test\img_043.png
+Answer: ABCCBAA
+Grade: 57
+
+Image: ./static/uploads\extracted\images_test\img_044.png
+Answer: DCBAABC
+Grade: 28
+
+Image: ./static/uploads\extracted\images_test\img_045.png
+Answer: BCADEAB
+Grade: 28
+
+Image: ./static/uploads\extracted\images_test\img_046.png
+Answer: BDABEEB
+Grade: 14
+
+Image: ./static/uploads\extracted\images_test\img_047.png
+Answer: DEDAEBA
+Grade: 28
+

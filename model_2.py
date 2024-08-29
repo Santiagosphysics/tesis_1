@@ -68,6 +68,38 @@ def img_prediction(img, model, name_labels):
     return prediction
 
 
+# def letter_pred(img, gray):
+#     names = names_label()
+#     letters = find_contours(img, gray)[0]
+#     img_pred = [img_prediction(letter, model, names) for letter in letters]
+#     question_row = []
+#     answer_row = []
+#     for i in range(len(img_pred)):
+#         if i%2 == 0:
+#             question_row.append(img_pred[i])
+#         else:
+#             answer_row.append(img_pred[i])
+#     response = ''
+
+    
+#     for i in answer_row:
+#         response += i
+
+#         if response == 'PREGUNTA' or response == 'PREGUMTA' or response == 'PRECUNTA':
+#             response = ''
+    
+#     # response = [i for i in response]
+
+#     fig, axes = plt.subplots(1, len(letters), figsize=(20,5) )
+
+#     for i, letter in enumerate(letters):
+#         letter = cv2.resize(letter, (28,28))
+#         axes[i].imshow(letter, cmap='gray')
+#         axes[i].axis('off')
+
+#     return response
+
+
 def letter_pred(img, gray):
     names = names_label()
     letters = find_contours(img, gray)[0]
@@ -75,30 +107,69 @@ def letter_pred(img, gray):
     question_row = []
     answer_row = []
     for i in range(len(img_pred)):
-        if i%2 == 0:
+
+        img_pred[i] = 'O' if img_pred[i] == '0' else img_pred[i]
+        img_pred[i] = 'A' if img_pred[i] == 'H' else img_pred[i]
+        img_pred[i] = 'A' if img_pred[i] == '4' else img_pred[i]
+        # img_pred[i] = 'D' if img_pred[i] == 'Q' else img_pred[i]
+
+        if i%2 == 0:       
+            # img_pred[i] = 'D' if img_pred[i] == 'P' else img_pred[i]
+            # img_pred[i] = 'D' if img_pred[i] == 'Q' else img_pred[i]         
             question_row.append(img_pred[i])
+            
         else:
+            # img_pred[i] = 'D' if img_pred[i] == 'P' else img_pred[i]
+            # img_pred[i] = 'D' if img_pred[i] == 'Q' else img_pred[i]   
             answer_row.append(img_pred[i])
-    response = ''
+            # print(img_pred[i])
+
+
+    print(question_row, answer_row)
+    box_q = ['RESPUESTA', 'RE5PUESTA', 'REPUETA', 'RESPUESTA', 'RESPUESA']
+    box_a = ['PREGUNTA', 'PREGUNA', 'REPUETA', 'RESPUESA']
+    
+    response_q = ''.join([i for i in question_row])
+    response_a = ''.join([i for i in answer_row])
+
+    for i in box_q:
+        if i in response_q:
+            response_q = response_q.replace(i, '')
+
+    for i in box_a:
+        if i in response_a:
+            response_a = response_a.replace(i, '')
+
+  
+    counter_q = 0
+    for i in response_q:
+        if i.isdigit():
+            counter_q += 1
 
     
-    for i in answer_row:
-        response += i
+    counter_a = 0
+    for i in response_a:
+        if i.isdigit():
+            counter_a += 1
+    print(counter_q, counter_a)
 
-        if response == 'PREGUNTA' or response == 'PREGUMTA' or response == 'PRECUNTA':
-            response = ''
+
+    if counter_a > counter_q:
+        response_q = response_q.replace('O', 'D')
+        response_q = response_q.replace('P', 'D')
+        response_q = response_q.replace('Q', 'D')
+        response_q = response_q.replace('T', 'A')
+
+        print(response_q, 'Y')
+        return response_q
     
-    # response = [i for i in response]
-
-    fig, axes = plt.subplots(1, len(letters), figsize=(20,5) )
-
-    for i, letter in enumerate(letters):
-        letter = cv2.resize(letter, (28,28))
-        axes[i].imshow(letter, cmap='gray')
-        axes[i].axis('off')
-
-    return response
-
+    else:
+        print(response_a, 'X')
+        response_a = response_a.replace('O', 'D')
+        response_a = response_a.replace('P', 'D')
+        response_a = response_a.replace('Q', 'D')
+        response_a = response_a.replace('T', 'A')
+        return response_a
 
 # gray, img = prepro_img('./images/image_test_9.jpg')
 # answer_row = letter_pred(img, gray)
